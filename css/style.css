@@ -1,3 +1,5 @@
+/* Estilos globais */
+
 body {
     background: #e5e5e5;
     color: #25282b;
@@ -5,13 +7,41 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+body.hide-scroll { overflow: hidden; }
+
 a {
     color: #ff5E84;
     font-weight: bold;
     text-decoration: none;
 }
 
-a:hover { color: rgb(236, 82, 118); }
+a:hover { text-decoration: none; }
+
+.button {
+    color: #fff;
+    background: #ff5E84;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px #ff5E8432;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+}
+
+.button a:hover { color: #fff; }
+
+.button:hover{ 
+    text-decoration: none;
+    background-color: #0984e3;
+}
+
+
+/* Estilo padrão */
+
 
 p, .description {
     font-size: 16px;
@@ -28,7 +58,7 @@ p, .description {
 
 .intro {
     width: 300px;
-    margin-right: 20px;
+    margin-right: 64px;
 }
 
 main { margin: 32px 0; }
@@ -54,16 +84,6 @@ button {
 
 button:hover{ text-decoration: underline; }
 
-.fat {
-    background: #ff5E84;
-    color: white;
-    width: 150px;
-    height: 40px;
-    border-radius: 6px;
-    box-shadow: 0px 8px 16px #ff5E8432;
-}
-
-.fat:hover{ text-decoration: none; }
 
 footer {
     text-align: center;
@@ -107,15 +127,19 @@ footer a {
     background: #ff5E84;
     position: absolute;
     top: 0;
-    width: 100vw;
-    height: 100vh;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
     display: flex;
     justify-content: center;
     transition: 400ms;
 }
 
+#modal.add-scroll { overflow: auto; }
+
 #modal .content {
-    margin-top: 128px;
+    margin-top: 15%;
     color: #fff;
 }
 
@@ -127,7 +151,7 @@ footer a {
 #modal form {
     max-width: 800px;
     width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 15%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -200,4 +224,59 @@ form button:hover {
 #modal.hide {
     opacity: 0;
     visibility: hidden;
+}
+
+
+/* IDEAS.HTML */
+
+
+#page-ideas #container {
+    display: block;
+}
+
+#page-ideas header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-ideas nav {
+    display: flex;
+    align-items: center;
+}
+
+li {
+    list-style-type: none;
+    margin-right: 16px;
+}
+
+li a { color: #25282b; }
+
+#page-ideas nav li:last-child { margin: 0; }
+
+section.title { text-align: center; }
+
+section.title p {
+    opacity: 0.4;
+    margin: 0;
+}
+
+section.title h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+section.ideas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section.ideas .idea {
+    margin: 0;
+}
+
+section.title,
+section.ideas,
+footer {
+    margin-top: 64px;
 }
