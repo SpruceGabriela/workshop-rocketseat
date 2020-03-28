@@ -121,6 +121,11 @@ footer a {
 
 .idea .description { margin: 16px 0; }
 
+.idea-options {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* Modal */
 
 #modal {

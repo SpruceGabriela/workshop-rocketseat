@@ -56,6 +56,14 @@ server.get("/ideas", function(req, res){
 
 })
 
+server.get("/delete", function(req, res){
+    const {id} = req.query;
+
+    db.all(`DELETE FROM ideas WHERE id = ${id}`, function(err, rows){
+        res.redirect("/ideas")
+    })
+})
+
 server.post("/", function(req, res){
     const query = `
     INSERT INTO ideas(

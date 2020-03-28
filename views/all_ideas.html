@@ -5,9 +5,12 @@
             <h3>{{idea.title}}</h3>
             <p>{{idea.category}}</p>
             <div class="description">
-                {{idea.description}}
+                <p>{{idea.description}}</p>
             </div>
-            <a href="{{idea.link}}" target="_blank">Ir para a idéia</a>
+            <div class="idea-options">
+                <a href="{{idea.link}}" target="_blank">Ir para a idéia</a>
+                <a href="/delete?id={{idea.id}}">Apagar</a>
+            </div>
         </div>
     </div>
 {% endfor %}
